@@ -1,0 +1,25 @@
+{
+  "xo": {
+    "esnext": true,
+    "semicolon": false,
+		"envs": ["browser", "es6"]
+  },
+  "scripts": {
+    "start": "http-server src -p $PORT",
+    "dev": "http-server src",
+    "test": "xo src/*.js"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "name": "learn-web-speech-api",
+  "version": "1.0.0",
+  "description": "Have fun with Web Speech APIs",
+  "main": "src/index.js",
+  "repository": "git@github.com:LasaleFamine/learn-web-speech-api.git",
+  "author": "LasaleFamine",
+  "license": "MIT",
+  "devDependencies": {
+    "xo": "^0.17.1"
+  }
+}
