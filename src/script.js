@@ -47,7 +47,7 @@ class Phrase {
 			if (this.phrases.indexOf(speechResult.toLowerCase()) > -1) {
 				resolve(speechResult)
 			} else {
-				reject(new Error('That didn\'t sound right.'))
+				reject(new Error(`That didn't sound right. --> "${speechResult}"`))
 			}
 			console.info(`Confidence: ${evt.results[0][0].confidence}`)
 		})
@@ -104,7 +104,7 @@ btn.addEventListener('click', () => {
 		tester.onResult(evt)
 			.then(res => {
 				console.log('Res from result', res)
-				notify('Gotcha!', 'alert-success')
+				notify(`Gotcha! --> "${res}"`, 'alert-success')
 				photo.src = `https://unsplash.it/200/300/?random&lol=${new Date()}`
 			})
 			.catch(err => {
